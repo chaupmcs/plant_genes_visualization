@@ -1,0 +1,117 @@
+<meta charset="utf-8">
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link rel="stylesheet" href="https://gmousse.github.io/dataframe-js/dist/dataframe.min.js">
+
+
+    <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">-->
+    <title>Plant Genes Visualizations</title>
+</head>
+
+
+<body>
+<!-- Where the unemployment visualization svgs go -->
+<div id="unemploymentCharts">
+</div>
+
+<!-- All the options for the visualization (states, years, etc.) -->
+<div id="options">
+    <h1>Control Panel</h1>
+    <div class="tab">
+        <button class="tablinks active" onclick="openTab(event, 'wt_comparison')">WT(s) Comparison</button>
+        <button class="tablinks" onclick="openTab(event, 's1_comparison')">S1(s) Comparison</button>
+        <button class="tablinks" onclick="openTab(event, 'pairwise_comparison')">S1(s) vs. WT(s)</button>
+        <button class="tablinks" onclick="openTab(event, 'custom_mode')">Custom Mode</button>
+
+    </div>
+
+    <div id="custom_mode" class="tabcontent">
+        <div id="comparisonOptions">
+            <h4>Compare To</h4>
+            <form id="option_form">
+                <input type="radio" name="comparison" id="noComparison" value="none" checked> No Comparison<br>
+                <input type="radio" name="comparison" id="stateComparison" value="state" display="inline"> Base
+                Condition
+            </form>
+            <select id="stateComparisonListdown" name="states" disabled>
+            </select>
+            <br>
+            <br>
+            <br>
+        </div>
+        <div id="stateOptions">
+            <input type="checkbox" id="all" name="stateSelection"> Select All<br>
+        </div>
+    </div>
+
+    <div id="wt_comparison" class="tabcontent" style="display:block">
+        <p>Compare each conditioned test with <b>wthp6</b></p>
+        <div class="btn-group"></div>
+        <div class="statTable_and_Venn_div">
+            <div class="statsTable_and_MasterSlider">
+                <div class="master_slider_div"></div>
+            </div>
+            <div id="venn_wt" class="venn_diagram"></div>
+        </div>
+    </div>
+
+    <div id="s1_comparison" class="tabcontent">
+        <p>Compare each conditioned test s1 with <b>s1hp6</b></p>
+        <div class="btn-group"></div>
+        <div class="master_slider_div"></div>
+        <div class="statTable_and_Venn_div">
+            <div class="statsTable_and_MasterSlider"></div>
+            <div id="venn_s1" class="venn_diagram"></div>
+        </div>
+    </div>
+
+    <div id="pairwise_comparison" class="tabcontent">
+        <p>Compare each conditioned <b>s1</b> with its responding <b>wt</b> (e.g., <i>s1hp6 vs. wthp6</i>)</p>
+        <div class="btn-group"></div>
+        <div class="master_slider_div"></div>
+        <div class="statTable_and_Venn_div">
+            <div class="statsTable_and_MasterSlider"></div>
+            <div id="venn_pairwise" class="venn_diagram"></div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="dataTable_and_print">
+    <!--    <h3 class="printNumber" id="printNumGenes"></h3>-->
+    <div class="dataTable" id="ipdatacsvDiv">
+        <table id="ipdatacsvTbl"></table>
+    </div>
+</div>
+
+
+<div class="next_page_btn">
+    <a href="#" id="previous_page" class="previous round">&#8249;</a>
+    <a href="#" id="next_page" class="next round">&#8250;</a>
+    <p id="next_page_sms"></p>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="https://gmousse.github.io/dataframe-js/dist/dataframe.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<script src="js/venn.min.js"></script>
+
+<!--<script src="js/d3-3.3.13/d3.js"></script>-->
+<script src="js/logic_variables.js"></script>
+<script src="js/UI_variables.js"></script>
+<script src="js/utilities.js"></script>
+
+<script src="js/main.js"></script>
+<script src="js/my_venn.js"></script>
+<script src="js/my_dataframe.js"></script>
+<script src="js/tab_options.js"></script>
+<script src="js/slider_controller.js"></script>
+<script src="js/stats_for_dataframe.js"></script>
+
+
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>-->
+</body>

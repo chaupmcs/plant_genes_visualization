@@ -1,0 +1,395 @@
+html {
+    height: 100%;
+}
+
+body, table {
+    font: 12px Arial;
+}
+
+h4 {
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+body {
+    background: #EEEEEE;
+}
+
+p {
+    display: inline;
+}
+
+
+.inactive {
+    fill: #AAA;
+}
+
+.active {
+    fill: orange;
+}
+
+.area.below {
+    /*fill: rgb(145,207,96);*/
+}
+
+.area.above {
+    fill: rgb(252, 141, 89);
+}
+
+.baseLine { /*alarm in HTML only*/
+    stroke: black;
+    stroke-width: 1.5;
+    fill: none;
+}
+
+
+.focus circle {
+    fill: white;
+    stroke: black;
+    stroke-width: 2px;
+}
+
+
+.chartHover {
+    fill: #FD0;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: teal;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+
+
+
+.master_slider::-webkit-slider-thumb {
+    background: mediumvioletred !important;
+
+}
+
+.master_slider{
+    width: 190px !important;
+
+
+}
+
+.master_slider_div{
+    display: inline-block;
+    display: inline-block;
+    margin-left: 8px;
+    float: left;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100px;
+    height: 5px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    display: inline;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: dodgerblue;
+    cursor: pointer;
+}
+
+
+
+
+#unemploymentCharts {
+    float: left;
+    width: 62%;
+    height: 98%;
+    margin: 0px 0px 0px 1px;
+    padding: 1px;
+    border-style: solid;
+    border-color: #AAA;
+    overflow-y: scroll;
+    background: white;
+}
+
+#options {
+    float: left;
+    width: 36%;
+    height: 410px;
+    /*min-height: 350px;*/
+    /*max-height: 400px;*/
+    padding: 5px;
+}
+
+h1 {
+    margin-top: 0px
+
+}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: white;
+    width: fit-content;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    /*background-color: white;*/
+    float: left;
+    /*border: None;*/
+    outline: none;
+    cursor: pointer;
+    /*padding: 5px 8px;*/
+    font-size: 12px;
+
+    padding: 1px 0.5em;
+    margin-left: 3px;
+    border: 1px solid #778;
+    border-bottom: none;
+    background-color: #c9e4ee;
+    text-decoration: none;
+
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: lightskyblue;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: steelblue;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 3px 5px;
+    border: 1px solid #ccc;
+    border-top: none;
+    height: 340px;
+    /*min-height: 300px;*/
+    /*max-height: 400px;*/
+    width: 95%;
+    min-width: 420px;
+    max-width: 500px;
+    background: white;
+}
+
+#stateOptions {
+    height: 220px;
+    width: 150px;
+    float: left;
+    border-style: solid;
+    border-color: #CCC;
+    overflow-y: scroll;
+    margin: 0px 5px 5px 0px;
+}
+
+#comparisonOptions {
+    float: left;
+    height: 40%;
+    width: 35%;
+    margin: 0px 60px 0px 0px;
+}
+
+
+
+.filter_btn {
+    background-color: rgb(231, 231, 231);
+    border: none;
+    color: black !important;
+    padding: 2px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 11px;
+    margin: 2px 10px 2px 2px;
+    border-radius: 1px;
+    width: 120px;
+    height: 20px;
+    cursor: pointer;
+    background-image: linear-gradient(to right, rgb(145, 207, 96), rgb(252, 141, 89)); /* Standard syntax (must be last) */
+}
+
+.filter_btn:hover{
+    box-shadow: 0 1px 1px rgba(0,0,0,0.19), 0 1px 1px rgba(0,0,0,0.23);
+    margin: 1px 1px 1px 1px;
+}
+
+
+.btn-group {
+    width: 100%;
+    float: left;
+    font-size: 11px;
+    margin-bottom: 2px;
+    display: inline-block;
+
+}
+
+
+table {
+    margin: 5px 10px 10px 10px;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background: white;
+}
+
+thead td {
+    font-weight: bold;
+    border: 1px solid #999999;
+    background-color: #cdcdcd;
+    padding: 8px;
+    font-size: 12px;
+    position: sticky;
+    top: -1;
+}
+
+tbody td {
+    border: 1px solid #dddddd;
+    padding: 3px;
+    font-size: 11px;
+
+}
+
+tr:nth-child(even) {
+    background-color: #ececec;
+}
+
+
+
+
+.btn_and_slide_container{
+    width: 130px;
+    height: 50px;
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 0px;
+}
+
+
+.dataTable_and_print{
+    display: inline-block;
+    width: 28%;
+    height: 190px;
+
+}
+
+.dataTable{
+    width: 100%;
+    height: 190px;
+    overflow-y: auto;
+
+}
+.statTable_and_Venn_div{
+    margin-top: 5px;
+    display: inline-block;
+    width: 100%;
+    height: 200px;
+}
+.statsTable_and_masterSlider{
+    margin-top: 0px;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    float: left;
+    /*font-size: 10px;*/
+
+}
+
+.statsTableClass {
+    width: 100%;
+    height: 180px;
+    overflow-y: auto;
+}
+
+.statsTableClass thead td, .statsTableClass tbody td {
+    padding: 2px;
+    font-size: 10px;
+}
+
+.printNumber {
+    margin-left: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 10px;
+    display: block;
+    float: left;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+a:hover {
+    background-color: lightskyblue;
+    color: black;
+}
+
+.previous, .next {
+    background-color: lightblue;
+    color: white;
+}
+
+.round {
+    border-radius: 50%;
+}
+
+.sort_btn{
+    background-color: lightskyblue;
+    border: none;
+    color: black !important;
+    padding: 2px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 2px 2px 2px 10px;
+    border-radius: 1px;
+    width: fit-content;
+    min-width: 190px;
+    max-width: 220px;
+    height: fit-content;
+    cursor: pointer;
+
+}
+
+.sort_btn:hover{
+    box-shadow: 0 2px 3px rgba(0,0,0,0.19), 0 3px 3px rgba(0,0,0,0.23);
+    margin: 1px 1px 1px 8px;
+}
+
+.venntooltip {
+    position: absolute;
+    text-align: center;
+    width: 128px;
+    height: 16px;
+    background: #333;
+    color: #ddd;
+    padding: 2px;
+    border: 0px;
+    border-radius: 8px;
+    opacity: 0;
+}
+
+.venn_diagram{
+    display: inline-block;
+    float: right;
+}
